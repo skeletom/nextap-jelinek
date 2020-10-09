@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43520F80253056110014D1E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F7F253056110014D1E9 /* AppDelegate.swift */; };
+		43520F82253056110014D1E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F81253056110014D1E9 /* SceneDelegate.swift */; };
+		43520F84253056110014D1E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F83253056110014D1E9 /* ViewController.swift */; };
+		43520F87253056110014D1E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43520F85253056110014D1E9 /* Main.storyboard */; };
+		43520F89253056120014D1E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43520F88253056120014D1E9 /* Assets.xcassets */; };
+		43520F8C253056120014D1E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43520F8A253056120014D1E9 /* LaunchScreen.storyboard */; };
+		43520F97253056130014D1E9 /* nextap_jelinekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F96253056130014D1E9 /* nextap_jelinekTests.swift */; };
+		43520FA2253056130014D1E9 /* nextap_jelinekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FA1253056130014D1E9 /* nextap_jelinekUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43520F93253056130014D1E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43520F74253056110014D1E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43520F7B253056110014D1E9;
+			remoteInfo = "nextap-jelinek";
+		};
+		43520F9E253056130014D1E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43520F74253056110014D1E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43520F7B253056110014D1E9;
+			remoteInfo = "nextap-jelinek";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43520F7C253056110014D1E9 /* nextap-jelinek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nextap-jelinek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43520F7F253056110014D1E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		43520F81253056110014D1E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		43520F83253056110014D1E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		43520F86253056110014D1E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43520F88253056120014D1E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43520F8B253056120014D1E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		43520F8D253056120014D1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43520F92253056130014D1E9 /* nextap-jelinekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nextap-jelinekTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43520F96253056130014D1E9 /* nextap_jelinekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nextap_jelinekTests.swift; sourceTree = "<group>"; };
+		43520F98253056130014D1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43520F9D253056130014D1E9 /* nextap-jelinekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nextap-jelinekUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43520FA1253056130014D1E9 /* nextap_jelinekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nextap_jelinekUITests.swift; sourceTree = "<group>"; };
+		43520FA3253056130014D1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43520F79253056110014D1E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43520F8F253056130014D1E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43520F9A253056130014D1E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43520F73253056110014D1E9 = {
+			isa = PBXGroup;
+			children = (
+				43520F7E253056110014D1E9 /* nextap-jelinek */,
+				43520F95253056130014D1E9 /* nextap-jelinekTests */,
+				43520FA0253056130014D1E9 /* nextap-jelinekUITests */,
+				43520F7D253056110014D1E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43520F7D253056110014D1E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43520F7C253056110014D1E9 /* nextap-jelinek.app */,
+				43520F92253056130014D1E9 /* nextap-jelinekTests.xctest */,
+				43520F9D253056130014D1E9 /* nextap-jelinekUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43520F7E253056110014D1E9 /* nextap-jelinek */ = {
+			isa = PBXGroup;
+			children = (
+				43520F7F253056110014D1E9 /* AppDelegate.swift */,
+				43520F81253056110014D1E9 /* SceneDelegate.swift */,
+				43520F83253056110014D1E9 /* ViewController.swift */,
+				43520F85253056110014D1E9 /* Main.storyboard */,
+				43520F88253056120014D1E9 /* Assets.xcassets */,
+				43520F8A253056120014D1E9 /* LaunchScreen.storyboard */,
+				43520F8D253056120014D1E9 /* Info.plist */,
+			);
+			path = "nextap-jelinek";
+			sourceTree = "<group>";
+		};
+		43520F95253056130014D1E9 /* nextap-jelinekTests */ = {
+			isa = PBXGroup;
+			children = (
+				43520F96253056130014D1E9 /* nextap_jelinekTests.swift */,
+				43520F98253056130014D1E9 /* Info.plist */,
+			);
+			path = "nextap-jelinekTests";
+			sourceTree = "<group>";
+		};
+		43520FA0253056130014D1E9 /* nextap-jelinekUITests */ = {
+			isa = PBXGroup;
+			children = (
+				43520FA1253056130014D1E9 /* nextap_jelinekUITests.swift */,
+				43520FA3253056130014D1E9 /* Info.plist */,
+			);
+			path = "nextap-jelinekUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43520F7B253056110014D1E9 /* nextap-jelinek */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43520FA6253056130014D1E9 /* Build configuration list for PBXNativeTarget "nextap-jelinek" */;
+			buildPhases = (
+				43520F78253056110014D1E9 /* Sources */,
+				43520F79253056110014D1E9 /* Frameworks */,
+				43520F7A253056110014D1E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "nextap-jelinek";
+			productName = "nextap-jelinek";
+			productReference = 43520F7C253056110014D1E9 /* nextap-jelinek.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43520F91253056130014D1E9 /* nextap-jelinekTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43520FA9253056130014D1E9 /* Build configuration list for PBXNativeTarget "nextap-jelinekTests" */;
+			buildPhases = (
+				43520F8E253056130014D1E9 /* Sources */,
+				43520F8F253056130014D1E9 /* Frameworks */,
+				43520F90253056130014D1E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43520F94253056130014D1E9 /* PBXTargetDependency */,
+			);
+			name = "nextap-jelinekTests";
+			productName = "nextap-jelinekTests";
+			productReference = 43520F92253056130014D1E9 /* nextap-jelinekTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		43520F9C253056130014D1E9 /* nextap-jelinekUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43520FAC253056130014D1E9 /* Build configuration list for PBXNativeTarget "nextap-jelinekUITests" */;
+			buildPhases = (
+				43520F99253056130014D1E9 /* Sources */,
+				43520F9A253056130014D1E9 /* Frameworks */,
+				43520F9B253056130014D1E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43520F9F253056130014D1E9 /* PBXTargetDependency */,
+			);
+			name = "nextap-jelinekUITests";
+			productName = "nextap-jelinekUITests";
+			productReference = 43520F9D253056130014D1E9 /* nextap-jelinekUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43520F74253056110014D1E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					43520F7B253056110014D1E9 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					43520F91253056130014D1E9 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 43520F7B253056110014D1E9;
+					};
+					43520F9C253056130014D1E9 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 43520F7B253056110014D1E9;
+					};
+				};
+			};
+			buildConfigurationList = 43520F77253056110014D1E9 /* Build configuration list for PBXProject "nextap-jelinek" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43520F73253056110014D1E9;
+			productRefGroup = 43520F7D253056110014D1E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43520F7B253056110014D1E9 /* nextap-jelinek */,
+				43520F91253056130014D1E9 /* nextap-jelinekTests */,
+				43520F9C253056130014D1E9 /* nextap-jelinekUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43520F7A253056110014D1E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43520F8C253056120014D1E9 /* LaunchScreen.storyboard in Resources */,
+				43520F89253056120014D1E9 /* Assets.xcassets in Resources */,
+				43520F87253056110014D1E9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43520F90253056130014D1E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43520F9B253056130014D1E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43520F78253056110014D1E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43520F84253056110014D1E9 /* ViewController.swift in Sources */,
+				43520F80253056110014D1E9 /* AppDelegate.swift in Sources */,
+				43520F82253056110014D1E9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43520F8E253056130014D1E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43520F97253056130014D1E9 /* nextap_jelinekTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43520F99253056130014D1E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43520FA2253056130014D1E9 /* nextap_jelinekUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43520F94253056130014D1E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43520F7B253056110014D1E9 /* nextap-jelinek */;
+			targetProxy = 43520F93253056130014D1E9 /* PBXContainerItemProxy */;
+		};
+		43520F9F253056130014D1E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43520F7B253056110014D1E9 /* nextap-jelinek */;
+			targetProxy = 43520F9E253056130014D1E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43520F85253056110014D1E9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43520F86253056110014D1E9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		43520F8A253056120014D1E9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43520F8B253056120014D1E9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43520FA4253056130014D1E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		43520FA5253056130014D1E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43520FA7253056130014D1E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXL49B8A2V;
+				INFOPLIST_FILE = "nextap-jelinek/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.jelinek.nextap.nextap-jelinek";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43520FA8253056130014D1E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXL49B8A2V;
+				INFOPLIST_FILE = "nextap-jelinek/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.jelinek.nextap.nextap-jelinek";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		43520FAA253056130014D1E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXL49B8A2V;
+				INFOPLIST_FILE = "nextap-jelinekTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.jelinek.nextap.nextap-jelinekTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nextap-jelinek.app/nextap-jelinek";
+			};
+			name = Debug;
+		};
+		43520FAB253056130014D1E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXL49B8A2V;
+				INFOPLIST_FILE = "nextap-jelinekTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.jelinek.nextap.nextap-jelinekTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nextap-jelinek.app/nextap-jelinek";
+			};
+			name = Release;
+		};
+		43520FAD253056130014D1E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXL49B8A2V;
+				INFOPLIST_FILE = "nextap-jelinekUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.jelinek.nextap.nextap-jelinekUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "nextap-jelinek";
+			};
+			name = Debug;
+		};
+		43520FAE253056130014D1E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXL49B8A2V;
+				INFOPLIST_FILE = "nextap-jelinekUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.jelinek.nextap.nextap-jelinekUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "nextap-jelinek";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43520F77253056110014D1E9 /* Build configuration list for PBXProject "nextap-jelinek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43520FA4253056130014D1E9 /* Debug */,
+				43520FA5253056130014D1E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43520FA6253056130014D1E9 /* Build configuration list for PBXNativeTarget "nextap-jelinek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43520FA7253056130014D1E9 /* Debug */,
+				43520FA8253056130014D1E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43520FA9253056130014D1E9 /* Build configuration list for PBXNativeTarget "nextap-jelinekTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43520FAA253056130014D1E9 /* Debug */,
+				43520FAB253056130014D1E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43520FAC253056130014D1E9 /* Build configuration list for PBXNativeTarget "nextap-jelinekUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43520FAD253056130014D1E9 /* Debug */,
+				43520FAE253056130014D1E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43520F74253056110014D1E9 /* Project object */;
+}
