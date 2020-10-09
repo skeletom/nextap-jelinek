@@ -12,23 +12,22 @@ class AppCoordinator: Coordinator {
   
   var childCoordinators: [Coordinator] = []
   var navigationController: UINavigationController
-  var dependencies: Dependencies
   
-  init(navigationController: UINavigationController, dependencies: Dependencies) {
+  init(navigationController: UINavigationController) {
     
     self.navigationController = navigationController
-    self.dependencies = dependencies
   }
   
   func start() {
     
-    presentLoginScreen()
+    
+    presentFeedScreen()
   }
   
-  private func presentLoginScreen() {
+  private func presentFeedScreen() {
     
-    let mainCoordinator = MainScreenCoordinator(navigationController: navigationController, dependencies: dependencies)
-    childCoordinators.append(mainCoordinator)
-    mainCoordinator.start()
+    let feedCoordinator = FeedCoordinator(navigationController: navigationController)
+    childCoordinators.append(feedCoordinator)
+    feedCoordinator.start()
   }
 }

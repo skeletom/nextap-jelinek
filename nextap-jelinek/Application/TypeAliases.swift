@@ -9,3 +9,5 @@ import Foundation
 
 typealias EmptyCompletion = () -> Void
 typealias StringCompletion = (_ value: String?) -> Void
+typealias RequestStoriesResult = Result<[Story], NetworkingError>
+typealias RequestStoriesCompletion = (RequestStoriesResult) -> Void

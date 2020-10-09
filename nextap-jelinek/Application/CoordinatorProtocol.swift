@@ -12,7 +12,6 @@ protocol Coordinator {
   
   var childCoordinators: [Coordinator] { get set }
   var navigationController: UINavigationController { get set }
-  var dependencies: Dependencies { get }
   
   func start()
 }
