@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		27EB3554C30F4856A4EAC53B /* Pods_nextap_jelinek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F233634F0E4952B2F196BDDC /* Pods_nextap_jelinek.framework */; };
 		43520F80253056110014D1E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F7F253056110014D1E9 /* AppDelegate.swift */; };
-		43520F84253056110014D1E9 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F83253056110014D1E9 /* FeedVC.swift */; };
+		43520F84253056110014D1E9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F83253056110014D1E9 /* FeedViewController.swift */; };
 		43520F89253056120014D1E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43520F88253056120014D1E9 /* Assets.xcassets */; };
 		43520F8C253056120014D1E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43520F8A253056120014D1E9 /* LaunchScreen.storyboard */; };
 		43520F97253056130014D1E9 /* nextap_jelinekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F96253056130014D1E9 /* nextap_jelinekTests.swift */; };
@@ -19,11 +19,12 @@
 		43520FCA253057590014D1E9 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FC9253057590014D1E9 /* TypeAliases.swift */; };
 		43520FDC253057AA0014D1E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43520FDE253057AA0014D1E9 /* Localizable.strings */; };
 		43520FE3253057F60014D1E9 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FE2253057F60014D1E9 /* FeedCoordinator.swift */; };
-		43520FF825305B960014D1E9 /* Feed.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43520FF725305B960014D1E9 /* Feed.xib */; };
 		4352101925307A980014D1E9 /* GetStoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4352101825307A980014D1E9 /* GetStoriesRequest.swift */; };
 		4352102225307CE80014D1E9 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4352102125307CE80014D1E9 /* Story.swift */; };
 		43521095253088200014D1E9 /* StoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43521094253088200014D1E9 /* StoriesDataSource.swift */; };
-		435210F12530910F0014D1E9 /* StoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435210F02530910F0014D1E9 /* StoriesData.swift */; };
+		435210FE253094770014D1E9 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435210FD253094770014D1E9 /* FeedViewModel.swift */; };
+		4352110A25309E7D0014D1E9 /* VerticalViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4352110925309E7D0014D1E9 /* VerticalViewLayout.swift */; };
+		435211432530ABCC0014D1E9 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435211422530ABCC0014D1E9 /* Feed.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,7 @@
 		027DC94509CD8AEBCF5C4B56 /* Pods-nextap-jelinek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nextap-jelinek.release.xcconfig"; path = "Target Support Files/Pods-nextap-jelinek/Pods-nextap-jelinek.release.xcconfig"; sourceTree = "<group>"; };
 		43520F7C253056110014D1E9 /* nextap-jelinek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nextap-jelinek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43520F7F253056110014D1E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		43520F83253056110014D1E9 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		43520F83253056110014D1E9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		43520F88253056120014D1E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43520F8B253056120014D1E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43520F8D253056120014D1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,11 +64,12 @@
 		43520FDD253057AA0014D1E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		43520FE2253057F60014D1E9 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 		43520FF025305B6C0014D1E9 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
-		43520FF725305B960014D1E9 /* Feed.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Feed.xib; sourceTree = "<group>"; };
 		4352101825307A980014D1E9 /* GetStoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStoriesRequest.swift; sourceTree = "<group>"; };
 		4352102125307CE80014D1E9 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		43521094253088200014D1E9 /* StoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesDataSource.swift; sourceTree = "<group>"; };
-		435210F02530910F0014D1E9 /* StoriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesData.swift; sourceTree = "<group>"; };
+		435210FD253094770014D1E9 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		4352110925309E7D0014D1E9 /* VerticalViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalViewLayout.swift; sourceTree = "<group>"; };
+		435211422530ABCC0014D1E9 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		673D96415BC8C0DE7C484E89 /* Pods-nextap-jelinek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nextap-jelinek.debug.xcconfig"; path = "Target Support Files/Pods-nextap-jelinek/Pods-nextap-jelinek.debug.xcconfig"; sourceTree = "<group>"; };
 		F233634F0E4952B2F196BDDC /* Pods_nextap_jelinek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nextap_jelinek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -183,8 +185,10 @@
 		4352100B253079950014D1E9 /* Feed Screen */ = {
 			isa = PBXGroup;
 			children = (
-				43520F83253056110014D1E9 /* FeedVC.swift */,
-				43520FF725305B960014D1E9 /* Feed.xib */,
+				435210FD253094770014D1E9 /* FeedViewModel.swift */,
+				43520F83253056110014D1E9 /* FeedViewController.swift */,
+				435211422530ABCC0014D1E9 /* Feed.storyboard */,
+				4352110925309E7D0014D1E9 /* VerticalViewLayout.swift */,
 			);
 			path = "Feed Screen";
 			sourceTree = "<group>";
@@ -195,7 +199,6 @@
 				43521094253088200014D1E9 /* StoriesDataSource.swift */,
 				4352101825307A980014D1E9 /* GetStoriesRequest.swift */,
 				4352102125307CE80014D1E9 /* Story.swift */,
-				435210F02530910F0014D1E9 /* StoriesData.swift */,
 			);
 			path = "Data Source";
 			sourceTree = "<group>";
@@ -323,9 +326,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				435211432530ABCC0014D1E9 /* Feed.storyboard in Resources */,
 				43520F8C253056120014D1E9 /* LaunchScreen.storyboard in Resources */,
 				43520FDC253057AA0014D1E9 /* Localizable.strings in Resources */,
-				43520FF825305B960014D1E9 /* Feed.xib in Resources */,
 				43520F89253056120014D1E9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,14 +398,15 @@
 			files = (
 				43520FCA253057590014D1E9 /* TypeAliases.swift in Sources */,
 				43520FBB253057150014D1E9 /* AppCoordinator.swift in Sources */,
-				43520F84253056110014D1E9 /* FeedVC.swift in Sources */,
-				435210F12530910F0014D1E9 /* StoriesData.swift in Sources */,
+				43520F84253056110014D1E9 /* FeedViewController.swift in Sources */,
 				43521095253088200014D1E9 /* StoriesDataSource.swift in Sources */,
+				435210FE253094770014D1E9 /* FeedViewModel.swift in Sources */,
 				4352101925307A980014D1E9 /* GetStoriesRequest.swift in Sources */,
 				43520FC0253057320014D1E9 /* CoordinatorProtocol.swift in Sources */,
 				43520F80253056110014D1E9 /* AppDelegate.swift in Sources */,
 				43520FE3253057F60014D1E9 /* FeedCoordinator.swift in Sources */,
 				4352102225307CE80014D1E9 /* Story.swift in Sources */,
+				4352110A25309E7D0014D1E9 /* VerticalViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

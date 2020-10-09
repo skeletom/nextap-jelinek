@@ -22,14 +22,15 @@ class FeedCoordinator: Coordinator {
   
   func start() {
     
-    let feedVC = FeedVC(delegate: self)
+    guard let feedVC = UIStoryboard(name: "Feed", bundle: nil).instantiateInitialViewController() as? FeedViewController else { return }
+    feedVC.delegate = self
     navigationController.pushViewController(feedVC, animated: false)
   }
 }
 
 extension FeedCoordinator: FeedDelegate {
   
-  func fetchStories(vc: FeedVC) {
+  func fetchStories(vc: FeedViewController) {
     
     dataSource.fetchData {(result) in
       

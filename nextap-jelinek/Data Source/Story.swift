@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct StoriesData: Codable {
+  
+  var data: [Story]
+}
+
 struct Story: Codable {
   
   var id: String

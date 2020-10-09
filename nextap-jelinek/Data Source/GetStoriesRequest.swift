@@ -30,7 +30,8 @@ class GetStoriesRequest {
       
       if let error = error {
         print("Response error \(error.localizedDescription)")
-        completion(.failure(.unexpected))
+        let code = (error as NSError).code
+        code == NSURLErrorTimedOut ? completion(.failure(.timeout)) : completion(.failure(.unexpected))
       } else if let data = data {
         guard let stories = stories(from: data) else {
           completion(.failure(.unexpected))
@@ -53,7 +54,6 @@ class GetStoriesRequest {
     
     do {
       let decodedData: StoriesData = try decoder.decode(StoriesData.self, from: data)
-      print("Decoded data: \(decodedData)")
       return decodedData.data
     } catch let error {
       print("Failed to decode JSON. \(error.localizedDescription)")
