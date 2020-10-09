@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		43520F80253056110014D1E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F7F253056110014D1E9 /* AppDelegate.swift */; };
-		43520F82253056110014D1E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F81253056110014D1E9 /* SceneDelegate.swift */; };
-		43520F84253056110014D1E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F83253056110014D1E9 /* ViewController.swift */; };
-		43520F87253056110014D1E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43520F85253056110014D1E9 /* Main.storyboard */; };
+		43520F84253056110014D1E9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F83253056110014D1E9 /* MainVC.swift */; };
 		43520F89253056120014D1E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43520F88253056120014D1E9 /* Assets.xcassets */; };
 		43520F8C253056120014D1E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43520F8A253056120014D1E9 /* LaunchScreen.storyboard */; };
 		43520F97253056130014D1E9 /* nextap_jelinekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F96253056130014D1E9 /* nextap_jelinekTests.swift */; };
 		43520FA2253056130014D1E9 /* nextap_jelinekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FA1253056130014D1E9 /* nextap_jelinekUITests.swift */; };
+		43520FBB253057150014D1E9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FBA253057150014D1E9 /* AppCoordinator.swift */; };
+		43520FC0253057320014D1E9 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FBF253057320014D1E9 /* CoordinatorProtocol.swift */; };
+		43520FC5253057470014D1E9 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FC4253057470014D1E9 /* Dependencies.swift */; };
+		43520FCA253057590014D1E9 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FC9253057590014D1E9 /* TypeAliases.swift */; };
+		43520FD0253057810014D1E9 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FCF253057810014D1E9 /* UserDefaultsManager.swift */; };
+		43520FDC253057AA0014D1E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43520FDE253057AA0014D1E9 /* Localizable.strings */; };
+		43520FE3253057F60014D1E9 /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FE2253057F60014D1E9 /* MainScreenCoordinator.swift */; };
+		43520FF825305B960014D1E9 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43520FF725305B960014D1E9 /* Main.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +43,7 @@
 /* Begin PBXFileReference section */
 		43520F7C253056110014D1E9 /* nextap-jelinek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nextap-jelinek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43520F7F253056110014D1E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		43520F81253056110014D1E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		43520F83253056110014D1E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		43520F86253056110014D1E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43520F83253056110014D1E9 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		43520F88253056120014D1E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43520F8B253056120014D1E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43520F8D253056120014D1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +53,15 @@
 		43520F9D253056130014D1E9 /* nextap-jelinekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nextap-jelinekUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43520FA1253056130014D1E9 /* nextap_jelinekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nextap_jelinekUITests.swift; sourceTree = "<group>"; };
 		43520FA3253056130014D1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43520FBA253057150014D1E9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		43520FBF253057320014D1E9 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		43520FC4253057470014D1E9 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		43520FC9253057590014D1E9 /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
+		43520FCF253057810014D1E9 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		43520FDD253057AA0014D1E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		43520FE2253057F60014D1E9 /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
+		43520FF025305B6C0014D1E9 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		43520FF725305B960014D1E9 /* Main.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +112,10 @@
 		43520F7E253056110014D1E9 /* nextap-jelinek */ = {
 			isa = PBXGroup;
 			children = (
-				43520F7F253056110014D1E9 /* AppDelegate.swift */,
-				43520F81253056110014D1E9 /* SceneDelegate.swift */,
-				43520F83253056110014D1E9 /* ViewController.swift */,
-				43520F85253056110014D1E9 /* Main.storyboard */,
-				43520F88253056120014D1E9 /* Assets.xcassets */,
-				43520F8A253056120014D1E9 /* LaunchScreen.storyboard */,
-				43520F8D253056120014D1E9 /* Info.plist */,
+				43520FB4253056530014D1E9 /* Application */,
+				43520FB5253056690014D1E9 /* Main Screen */,
+				43520FCE2530576D0014D1E9 /* Managers */,
+				43520FB62530568B0014D1E9 /* Resources */,
 			);
 			path = "nextap-jelinek";
 			sourceTree = "<group>";
@@ -126,6 +136,47 @@
 				43520FA3253056130014D1E9 /* Info.plist */,
 			);
 			path = "nextap-jelinekUITests";
+			sourceTree = "<group>";
+		};
+		43520FB4253056530014D1E9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				43520F7F253056110014D1E9 /* AppDelegate.swift */,
+				43520FBA253057150014D1E9 /* AppCoordinator.swift */,
+				43520FBF253057320014D1E9 /* CoordinatorProtocol.swift */,
+				43520FC4253057470014D1E9 /* Dependencies.swift */,
+				43520FC9253057590014D1E9 /* TypeAliases.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		43520FB5253056690014D1E9 /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				43520FE2253057F60014D1E9 /* MainScreenCoordinator.swift */,
+				43520F83253056110014D1E9 /* MainVC.swift */,
+				43520FF725305B960014D1E9 /* Main.xib */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		43520FB62530568B0014D1E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				43520F88253056120014D1E9 /* Assets.xcassets */,
+				43520F8A253056120014D1E9 /* LaunchScreen.storyboard */,
+				43520F8D253056120014D1E9 /* Info.plist */,
+				43520FDE253057AA0014D1E9 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		43520FCE2530576D0014D1E9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				43520FCF253057810014D1E9 /* UserDefaultsManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +264,7 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = 43520F73253056110014D1E9;
 			productRefGroup = 43520F7D253056110014D1E9 /* Products */;
@@ -232,8 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				43520F8C253056120014D1E9 /* LaunchScreen.storyboard in Resources */,
+				43520FDC253057AA0014D1E9 /* Localizable.strings in Resources */,
+				43520FF825305B960014D1E9 /* Main.xib in Resources */,
 				43520F89253056120014D1E9 /* Assets.xcassets in Resources */,
-				43520F87253056110014D1E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43520F84253056110014D1E9 /* ViewController.swift in Sources */,
+				43520FCA253057590014D1E9 /* TypeAliases.swift in Sources */,
+				43520FBB253057150014D1E9 /* AppCoordinator.swift in Sources */,
+				43520F84253056110014D1E9 /* MainVC.swift in Sources */,
+				43520FD0253057810014D1E9 /* UserDefaultsManager.swift in Sources */,
+				43520FC0253057320014D1E9 /* CoordinatorProtocol.swift in Sources */,
+				43520FC5253057470014D1E9 /* Dependencies.swift in Sources */,
 				43520F80253056110014D1E9 /* AppDelegate.swift in Sources */,
-				43520F82253056110014D1E9 /* SceneDelegate.swift in Sources */,
+				43520FE3253057F60014D1E9 /* MainScreenCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,20 +354,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		43520F85253056110014D1E9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43520F86253056110014D1E9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		43520F8A253056120014D1E9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				43520F8B253056120014D1E9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		43520FDE253057AA0014D1E9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43520FDD253057AA0014D1E9 /* en */,
+				43520FF025305B6C0014D1E9 /* cs */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -319,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -366,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -380,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -421,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,7 +499,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXL49B8A2V;
-				INFOPLIST_FILE = "nextap-jelinek/Info.plist";
+				INFOPLIST_FILE = "nextap-jelinek/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +518,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXL49B8A2V;
-				INFOPLIST_FILE = "nextap-jelinek/Info.plist";
+				INFOPLIST_FILE = "nextap-jelinek/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
