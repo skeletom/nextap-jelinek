@@ -26,6 +26,10 @@ class FeedCoordinator: Coordinator {
     feedVC.delegate = self
     navigationController.pushViewController(feedVC, animated: false)
   }
+  
+  private func alertFetchStoriesFailed(error: NetworkingError) {
+    
+  }
 }
 
 extension FeedCoordinator: FeedDelegate {
@@ -37,7 +41,7 @@ extension FeedCoordinator: FeedDelegate {
       DispatchQueue.main.async {[self] in
         switch result {
         case .success(let stories):
-          vc.showStories(stories: stories)
+          vc.showStories(stories: stories, feedType: .vertical)
         case .failure(let error):
           alertFetchStoriesFailed(error: error)
         }
@@ -45,7 +49,8 @@ extension FeedCoordinator: FeedDelegate {
     }
   }
   
-  private func alertFetchStoriesFailed(error: NetworkingError) {
+  func showPreview(vc: FeedViewController, story: Story, indexPath: IndexPath) {
     
+    vc.changeToHorizontalFeedType(scrollToIndexPath: indexPath)
   }
 }

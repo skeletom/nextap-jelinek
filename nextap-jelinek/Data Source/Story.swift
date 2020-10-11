@@ -15,15 +15,27 @@ struct StoriesData: Codable {
 struct Story: Codable {
   
   var id: String
-  var displayName: String?
   var coverImageURL: String?
-  var avatarImageURL: String?
+  var title: String?
+  var user: User
   
   enum CodingKeys: String, CodingKey {
     
     case id
-    case displayName = "display_name"
     case coverImageURL = "cover_src"
+    case title
+    case user
+  }
+}
+
+struct User: Codable {
+  
+  var displayName: String?
+  var avatarImageURL: String?
+  
+  enum CodingKeys: String, CodingKey {
+    
+    case displayName = "display_name"
     case avatarImageURL = "avatar_image_url"
   }
 }
