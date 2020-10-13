@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeedVerticalCell: UICollectionViewCell {
+class FeedCell: UICollectionViewCell {
     
   @IBOutlet weak var storyImageView: UIImageView!
   @IBOutlet weak var storyTitleLabel: UILabel!
@@ -30,7 +30,7 @@ class FeedVerticalCell: UICollectionViewCell {
     avatarImageView.layer.borderColor = UIColor.white.cgColor
   }
   
-  func setup(withStory story: Story, feedType: FeedType) {
+  func setup(withStory story: Story, feedDirection: UICollectionView.ScrollDirection) {
     
     storyImageView.image = nil
     storyImageView.downloadImage(fromLink: story.coverImageURL)
@@ -41,12 +41,13 @@ class FeedVerticalCell: UICollectionViewCell {
     avatarNameLabel.text = story.user.displayName
     avatarNameLabel.isHidden = story.user.displayName == nil
     
-    switch feedType {
+    switch feedDirection {
     case .vertical:
       storyTitleLabel.isHidden = true
     case .horizontal:
       storyTitleLabel.text = story.title
       storyTitleLabel.isHidden = storyTitleLabel.text == nil
+    @unknown default:()
     }
   }
 }

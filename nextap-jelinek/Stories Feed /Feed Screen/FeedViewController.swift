@@ -19,6 +19,9 @@ class FeedViewController: UIViewController {
   
   weak var delegate: FeedDelegate?
   private var viewModel: FeedViewModel?
+  private var feedDirection: UICollectionView.ScrollDirection {
+    return (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).scrollDirection
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,9 +29,9 @@ class FeedViewController: UIViewController {
     delegate?.fetchStories(vc: self)
   }
   
-  func showStories(stories: [Story], feedType: FeedType) {
+  func showStories(stories: [Story]) {
     
-    viewModel = FeedViewModel(stories: stories, feedType: feedType)
+    viewModel = FeedViewModel(stories: stories)
     
     if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
       layout.itemSize = sizeForItem(withFlowLayout: layout)
@@ -44,11 +47,11 @@ class FeedViewController: UIViewController {
       if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
         
         layout.scrollDirection = .horizontal
-        let itemSize = sizeForItem(withFlowLayout: layout)
-        layout.itemSize = itemSize
-        let horizontalInset = (collectionView.frame.size.width - itemSize.width) / 2
+        layout.itemSize = sizeForItem(withFlowLayout: layout)
+        let horizontalInset = (collectionView.frame.size.width - layout.itemSize.width) / 2
         
         collectionView.contentInset = UIEdgeInsets(top: 0, left: horizontalInset, bottom: 0, right: horizontalInset)
+        //collectionView.setContentOffset(CGPoint(x: 1000, y: 0), animated: false)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
       }
     }
@@ -90,8 +93,8 @@ extension FeedViewController: UICollectionViewDataSource {
     
     guard let viewModel = viewModel, let story = viewModel.story(atIndexPath: indexPath) else { return UICollectionViewCell() }
     
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VerticalCellIdentifier", for: indexPath) as! FeedVerticalCell
-    cell.setup(withStory: story, feedType: viewModel.feedType)
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeedCellIdentifier", for: indexPath) as! FeedCell
+    cell.setup(withStory: story, feedDirection: feedDirection)
     return cell
   }
 }
@@ -100,7 +103,7 @@ extension FeedViewController: UICollectionViewDelegate {
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
-    guard let feedType = viewModel?.feedType, feedType == .vertical, let story = viewModel?.story(atIndexPath: indexPath) else { return }
+    guard feedDirection == .vertical, let story = viewModel?.story(atIndexPath: indexPath) else { return }
     delegate?.showPreview(vc: self, story: story, indexPath: indexPath)
   }
 }
