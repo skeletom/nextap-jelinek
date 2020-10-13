@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
     let navController = UINavigationController()
-    navController.setNavigationBarHidden(true, animated: false)
+    navController.navigationBar.barTintColor = UIColor(named: "Gold")
     coordinator = AppCoordinator(navigationController: navController)
     coordinator?.start()
     

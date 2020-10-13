@@ -10,7 +10,7 @@ import UIKit
 protocol FeedDelegate: class {
   
   func fetchStories(vc: FeedViewController)
-  func showPreview(vc: FeedViewController, story: Story, indexPath: IndexPath)
+  func changeFeedType(vc: FeedViewController, feedType: UICollectionView.ScrollDirection, showStory story: Story)
 }
 
 class FeedViewController: UIViewController {
@@ -26,10 +26,13 @@ class FeedViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setupNavigationBar()
     delegate?.fetchStories(vc: self)
   }
   
-  func showStories(stories: [Story]) {
+  // MARK: - Reload Data
+  
+  func reloadStories(stories: [Story]) {
     
     viewModel = FeedViewModel(stories: stories)
     
@@ -40,19 +43,49 @@ class FeedViewController: UIViewController {
     collectionView.reloadData()
   }
   
-  func changeToHorizontalFeedType(scrollToIndexPath indexPath: IndexPath) {
+  // MARK: - Change Feed Style
+  
+  func changeFeedType(newDirection: UICollectionView.ScrollDirection, showStory story: Story) {
+    
+    guard let indexPath = viewModel?.indexPath(forStory: story) else { return }
+    
+    switch newDirection {
+    case .horizontal:
+      changeToHorizontalFeedType(showStoryAtIndexPath: indexPath)
+    case .vertical:
+      changeToVerticalFeedType(showStoryAtIndexPath: indexPath)
+    @unknown default:()
+    }
+    
+    setupNavigationBar()
+  }
+  
+  private func changeToHorizontalFeedType(showStoryAtIndexPath indexPath: IndexPath) {
+    
+    UIView.animate(withDuration: 0.5) {[self] in
+      
+      let horizontalLayout = HorizontalFlowLayout()
+      let itemSize = sizeForItem(withFlowLayout: horizontalLayout)
+      horizontalLayout.itemSize = itemSize
+      
+      collectionView.collectionViewLayout = horizontalLayout
+      collectionView.decelerationRate = .fast
+      
+      collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+    }
+  }
+  
+  private func changeToVerticalFeedType(showStoryAtIndexPath indexPath: IndexPath) {
     
     UIView.animate(withDuration: 0.5) {[self] in
       
       if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
         
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = .vertical
         layout.itemSize = sizeForItem(withFlowLayout: layout)
-        let horizontalInset = (collectionView.frame.size.width - layout.itemSize.width) / 2
         
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: horizontalInset, bottom: 0, right: horizontalInset)
-        //collectionView.setContentOffset(CGPoint(x: 1000, y: 0), animated: false)
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: false)
       }
     }
   }
@@ -60,8 +93,8 @@ class FeedViewController: UIViewController {
   private func sizeForItem(withFlowLayout flowayout: UICollectionViewFlowLayout) -> CGSize {
     
     let space: CGFloat = (flowayout.minimumInteritemSpacing) + (flowayout.sectionInset.left) + (flowayout.sectionInset.right)
-    
     var itemSize: CGSize
+    
     switch flowayout.scrollDirection {
     case .vertical:
       let width: CGFloat = (collectionView.frame.size.width - space) / 2.0
@@ -76,6 +109,43 @@ class FeedViewController: UIViewController {
     }
     
     return itemSize
+  }
+  
+  // MARK: - Navigation Bar
+  
+  private func setupNavigationBar() {
+    
+    title = NSLocalizedString("stories.title", comment: "")
+    
+    switch feedDirection {
+    case .vertical:
+      let feedToHorizontalBarButton = UIBarButtonItem(image: UIImage(systemName: "doc.richtext") , style: .plain, target: self, action: #selector(feedToHorizontalBarButtonTapped))
+      feedToHorizontalBarButton.tintColor = UIColor.black
+      navigationItem.rightBarButtonItem = feedToHorizontalBarButton
+    case .horizontal:
+      let feedToVerticalBarButton = UIBarButtonItem(image: UIImage(systemName: "square.grid.3x3.fill.square") , style: .plain, target: self, action: #selector(feedToVerticalBarButtonTapped))
+      feedToVerticalBarButton.tintColor = UIColor.black
+      navigationItem.rightBarButtonItem = feedToVerticalBarButton
+    @unknown default:()
+    }
+  }
+  
+  @objc func feedToHorizontalBarButtonTapped() {
+    
+    guard let story = currentStory() else { return }
+    delegate?.changeFeedType(vc: self, feedType: .horizontal, showStory: story)
+  }
+  
+  @objc func feedToVerticalBarButtonTapped() {
+    
+    guard let story = currentStory() else { return }
+    delegate?.changeFeedType(vc: self, feedType: .vertical, showStory: story)
+  }
+  
+  private func currentStory() -> Story? {
+    
+    guard let firstVisibleCell =  collectionView.visibleCells.first, let indexPath = collectionView.indexPath(for: firstVisibleCell), let story = viewModel?.story(atIndexPath: indexPath) else { return nil }
+    return story
   }
 }
 
@@ -104,11 +174,7 @@ extension FeedViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
     guard feedDirection == .vertical, let story = viewModel?.story(atIndexPath: indexPath) else { return }
-    delegate?.showPreview(vc: self, story: story, indexPath: indexPath)
+    delegate?.changeFeedType(vc: self, feedType: .horizontal, showStory: story)
   }
-}
-
-extension FeedViewController: UICollectionViewDelegateFlowLayout {
-  
 }
 

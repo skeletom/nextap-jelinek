@@ -26,4 +26,10 @@ class FeedViewModel {
     guard indexPath.row < stories.count else { return nil }
     return stories[indexPath.row]
   }
+  
+  func indexPath(forStory story: Story) -> IndexPath? {
+    
+    guard let index = stories.firstIndex(of: story) else { return nil }
+    return IndexPath(item: index, section: 0)
+  }
 }

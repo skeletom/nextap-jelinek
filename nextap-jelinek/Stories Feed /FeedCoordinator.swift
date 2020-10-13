@@ -41,7 +41,7 @@ extension FeedCoordinator: FeedDelegate {
       DispatchQueue.main.async {[self] in
         switch result {
         case .success(let stories):
-          vc.showStories(stories: stories)
+          vc.reloadStories(stories: stories)
         case .failure(let error):
           alertFetchStoriesFailed(error: error)
         }
@@ -49,8 +49,8 @@ extension FeedCoordinator: FeedDelegate {
     }
   }
   
-  func showPreview(vc: FeedViewController, story: Story, indexPath: IndexPath) {
+  func changeFeedType(vc: FeedViewController, feedType: UICollectionView.ScrollDirection, showStory story: Story) {
     
-    vc.changeToHorizontalFeedType(scrollToIndexPath: indexPath)
+    vc.changeFeedType(newDirection: feedType, showStory: story)
   }
 }

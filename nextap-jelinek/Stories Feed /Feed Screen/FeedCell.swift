@@ -19,7 +19,7 @@ class FeedCell: UICollectionViewCell {
     
     self.layer.cornerRadius = 12.0
     self.layer.borderWidth = 3
-    self.layer.borderColor = UIColor(red: 0.5, green: 0.47, blue: 0.25, alpha: 1.0).cgColor
+    self.layer.borderColor = UIColor(named: "Gold")!.cgColor
   }
   
   override func layoutSubviews() {

@@ -12,7 +12,7 @@ struct StoriesData: Codable {
   var data: [Story]
 }
 
-struct Story: Codable {
+struct Story: Codable, Equatable {
   
   var id: String
   var coverImageURL: String?
@@ -25,6 +25,10 @@ struct Story: Codable {
     case coverImageURL = "cover_src"
     case title
     case user
+  }
+  
+  static func == (lhs: Story, rhs: Story) -> Bool {
+    return lhs.id == rhs.id
   }
 }
 
