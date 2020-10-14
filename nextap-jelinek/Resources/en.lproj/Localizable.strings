@@ -7,3 +7,8 @@
 */
 
 "stories.title" = "Stories";
+"fetch.stories.failed.title" = "Error";
+"fetch.stories.failed.message.unexpected" = "Unexpected error when downloading stories. Please contact the author.";
+"fetch.stories.failed.message.timeout" = "Could not download stories in reasonable time. Please check your Internet and try again.";
+"fetch.stories.failed.close" = "Close";
+"fetch.stories.failed.retry" = "Retry";

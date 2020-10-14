@@ -7,3 +7,9 @@
 */
 
 "stories.title" = "Příběhy";
+"fetch.stories.failed.title" = "Chyba";
+"fetch.stories.failed.message.unexpected" = "Neočekávaná chyba při stahování příběhů. Prosím kontaktujte autora.";
+"fetch.stories.failed.message.timeout" = "Nepovedlo se stáhnout příběhy v rozumném čase. Zkontrolujte svůj Interner a zkuste to znovu.";
+"fetch.stories.failed.close" = "Zavřít";
+"fetch.stories.failed.retry" = "Opakovat";
+

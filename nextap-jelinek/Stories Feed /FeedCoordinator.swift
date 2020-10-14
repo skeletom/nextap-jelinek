@@ -27,8 +27,26 @@ class FeedCoordinator: Coordinator {
     navigationController.pushViewController(feedVC, animated: false)
   }
   
-  private func alertFetchStoriesFailed(error: NetworkingError) {
+  private func alertFetchStoriesFailed(vc: FeedViewController, error: NetworkingError) {
     
+    let message: String
+    switch error {
+    case .unexpected:
+      message = NSLocalizedString("fetch.stories.failed.message.unexpected", comment: "")
+    case .timeout:
+      message = NSLocalizedString("fetch.stories.failed.message.timeout", comment: "")
+    }
+    
+    let alert = UIAlertController(title: NSLocalizedString("fetch.stories.failed.title", comment: ""), message: message, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: NSLocalizedString("fetch.stories.failed.close", comment: ""), style: .cancel, handler: nil))
+    
+    if error == .timeout {
+      alert.addAction(UIAlertAction(title: NSLocalizedString("fetch.stories.failed.retry", comment: ""), style: .default, handler: {[self] (action) in
+        fetchStories(vc: vc)
+      }))
+    }
+    
+    vc.present(alert, animated: true)
   }
 }
 
@@ -43,7 +61,7 @@ extension FeedCoordinator: FeedDelegate {
         case .success(let stories):
           vc.reloadStories(stories: stories)
         case .failure(let error):
-          alertFetchStoriesFailed(error: error)
+          alertFetchStoriesFailed(vc: vc, error: error)
         }
       }
     }
