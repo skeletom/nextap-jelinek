@@ -25,7 +25,7 @@ class HorizontalFlowLayout: UICollectionViewFlowLayout {
   
   override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
     
-    let collectionViewSize: CGSize = self.collectionView!.bounds.size
+    let collectionViewSize: CGSize = collectionView!.bounds.size
     var offsetAdjustment = CGFloat.greatestFiniteMagnitude
     let leftInset: CGFloat = (collectionViewSize.width - itemSize.width) / 2
     let horizontalOffset = proposedContentOffset.x + leftInset

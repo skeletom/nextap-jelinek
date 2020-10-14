@@ -76,6 +76,7 @@
 		435210FD253094770014D1E9 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		435211422530ABCC0014D1E9 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		437B97982535F69500F1A253 /* HorizontalFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalFlowLayout.swift; sourceTree = "<group>"; };
+		437B97A025371D0200F1A253 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		673D96415BC8C0DE7C484E89 /* Pods-nextap-jelinek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nextap-jelinek.debug.xcconfig"; path = "Target Support Files/Pods-nextap-jelinek/Pods-nextap-jelinek.debug.xcconfig"; sourceTree = "<group>"; };
 		F233634F0E4952B2F196BDDC /* Pods_nextap_jelinek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nextap_jelinek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				43520F7E253056110014D1E9 /* nextap-jelinek */,
+				437B97A025371D0200F1A253 /* README.md */,
 				43520F95253056130014D1E9 /* nextap-jelinekTests */,
 				43520FA0253056130014D1E9 /* nextap-jelinekUITests */,
 				43520F7D253056110014D1E9 /* Products */,
@@ -211,9 +213,9 @@
 			children = (
 				435210FD253094770014D1E9 /* FeedViewModel.swift */,
 				43520F83253056110014D1E9 /* FeedViewController.swift */,
+				437B97982535F69500F1A253 /* HorizontalFlowLayout.swift */,
 				432FC0CC25332BC7000574CF /* FeedCell.swift */,
 				435211422530ABCC0014D1E9 /* Feed.storyboard */,
-				437B97982535F69500F1A253 /* HorizontalFlowLayout.swift */,
 			);
 			path = "Feed Screen";
 			sourceTree = "<group>";
