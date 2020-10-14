@@ -16,7 +16,6 @@
 		43520F89253056120014D1E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43520F88253056120014D1E9 /* Assets.xcassets */; };
 		43520F8C253056120014D1E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43520F8A253056120014D1E9 /* LaunchScreen.storyboard */; };
 		43520F97253056130014D1E9 /* nextap_jelinekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520F96253056130014D1E9 /* nextap_jelinekTests.swift */; };
-		43520FA2253056130014D1E9 /* nextap_jelinekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FA1253056130014D1E9 /* nextap_jelinekUITests.swift */; };
 		43520FBB253057150014D1E9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FBA253057150014D1E9 /* AppCoordinator.swift */; };
 		43520FC0253057320014D1E9 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FBF253057320014D1E9 /* CoordinatorProtocol.swift */; };
 		43520FCA253057590014D1E9 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43520FC9253057590014D1E9 /* TypeAliases.swift */; };
@@ -32,13 +31,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		43520F93253056130014D1E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43520F74253056110014D1E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43520F7B253056110014D1E9;
-			remoteInfo = "nextap-jelinek";
-		};
-		43520F9E253056130014D1E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 43520F74253056110014D1E9 /* Project object */;
 			proxyType = 1;
@@ -61,9 +53,6 @@
 		43520F92253056130014D1E9 /* nextap-jelinekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nextap-jelinekTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43520F96253056130014D1E9 /* nextap_jelinekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nextap_jelinekTests.swift; sourceTree = "<group>"; };
 		43520F98253056130014D1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43520F9D253056130014D1E9 /* nextap-jelinekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nextap-jelinekUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43520FA1253056130014D1E9 /* nextap_jelinekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nextap_jelinekUITests.swift; sourceTree = "<group>"; };
-		43520FA3253056130014D1E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43520FBA253057150014D1E9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		43520FBF253057320014D1E9 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		43520FC9253057590014D1E9 /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
@@ -97,13 +86,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43520F9A253056130014D1E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -129,7 +111,6 @@
 				43520F7E253056110014D1E9 /* nextap-jelinek */,
 				437B97A025371D0200F1A253 /* README.md */,
 				43520F95253056130014D1E9 /* nextap-jelinekTests */,
-				43520FA0253056130014D1E9 /* nextap-jelinekUITests */,
 				43520F7D253056110014D1E9 /* Products */,
 				6F2F25EB73622CF0B6833027 /* Pods */,
 				FF158B2445C34D4A0BA2C5BB /* Frameworks */,
@@ -141,7 +122,6 @@
 			children = (
 				43520F7C253056110014D1E9 /* nextap-jelinek.app */,
 				43520F92253056130014D1E9 /* nextap-jelinekTests.xctest */,
-				43520F9D253056130014D1E9 /* nextap-jelinekUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,15 +146,6 @@
 				43520F98253056130014D1E9 /* Info.plist */,
 			);
 			path = "nextap-jelinekTests";
-			sourceTree = "<group>";
-		};
-		43520FA0253056130014D1E9 /* nextap-jelinekUITests */ = {
-			isa = PBXGroup;
-			children = (
-				43520FA1253056130014D1E9 /* nextap_jelinekUITests.swift */,
-				43520FA3253056130014D1E9 /* Info.plist */,
-			);
-			path = "nextap-jelinekUITests";
 			sourceTree = "<group>";
 		};
 		43520FB4253056530014D1E9 /* Application */ = {
@@ -287,24 +258,6 @@
 			productReference = 43520F92253056130014D1E9 /* nextap-jelinekTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		43520F9C253056130014D1E9 /* nextap-jelinekUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 43520FAC253056130014D1E9 /* Build configuration list for PBXNativeTarget "nextap-jelinekUITests" */;
-			buildPhases = (
-				43520F99253056130014D1E9 /* Sources */,
-				43520F9A253056130014D1E9 /* Frameworks */,
-				43520F9B253056130014D1E9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				43520F9F253056130014D1E9 /* PBXTargetDependency */,
-			);
-			name = "nextap-jelinekUITests";
-			productName = "nextap-jelinekUITests";
-			productReference = 43520F9D253056130014D1E9 /* nextap-jelinekUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -318,10 +271,6 @@
 						CreatedOnToolsVersion = 12.0.1;
 					};
 					43520F91253056130014D1E9 = {
-						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = 43520F7B253056110014D1E9;
-					};
-					43520F9C253056130014D1E9 = {
 						CreatedOnToolsVersion = 12.0.1;
 						TestTargetID = 43520F7B253056110014D1E9;
 					};
@@ -343,7 +292,6 @@
 			targets = (
 				43520F7B253056110014D1E9 /* nextap-jelinek */,
 				43520F91253056130014D1E9 /* nextap-jelinekTests */,
-				43520F9C253056130014D1E9 /* nextap-jelinekUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -361,13 +309,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		43520F90253056130014D1E9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43520F9B253056130014D1E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -448,14 +389,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43520F99253056130014D1E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43520FA2253056130014D1E9 /* nextap_jelinekUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -463,11 +396,6 @@
 			isa = PBXTargetDependency;
 			target = 43520F7B253056110014D1E9 /* nextap-jelinek */;
 			targetProxy = 43520F93253056130014D1E9 /* PBXContainerItemProxy */;
-		};
-		43520F9F253056130014D1E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43520F7B253056110014D1E9 /* nextap-jelinek */;
-			targetProxy = 43520F9E253056130014D1E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -694,46 +622,6 @@
 			};
 			name = Release;
 		};
-		43520FAD253056130014D1E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXL49B8A2V;
-				INFOPLIST_FILE = "nextap-jelinekUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cz.jelinek.nextap.nextap-jelinekUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "nextap-jelinek";
-			};
-			name = Debug;
-		};
-		43520FAE253056130014D1E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXL49B8A2V;
-				INFOPLIST_FILE = "nextap-jelinekUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cz.jelinek.nextap.nextap-jelinekUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "nextap-jelinek";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -760,15 +648,6 @@
 			buildConfigurations = (
 				43520FAA253056130014D1E9 /* Debug */,
 				43520FAB253056130014D1E9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		43520FAC253056130014D1E9 /* Build configuration list for PBXNativeTarget "nextap-jelinekUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				43520FAD253056130014D1E9 /* Debug */,
-				43520FAE253056130014D1E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

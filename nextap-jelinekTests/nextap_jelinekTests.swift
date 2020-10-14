@@ -9,25 +9,32 @@ import XCTest
 @testable import nextap_jelinek
 
 class nextap_jelinekTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+  
+  func testGetStoriesRequest() {
+    
+    let responseExpectation = expectation(description: "Download stories")
+    var responseResult: RequestStoriesResult?
+    
+    let request = GetStoriesRequest()
+    request.send { (result) in
+      responseResult = result
+      responseExpectation.fulfill()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    waitForExpectations(timeout: 10) { (error) in
+      
+      XCTAssertNotNil(responseResult)
+      
+      var stories: [Story] = []
+      switch responseResult! {
+      case .success(let fetchedStories):
+        stories = fetchedStories
+      case .failure(let error):
+        XCTFail("Failed to load stories. \(error)")
+      }
+      
+      XCTAssertGreaterThan(stories.count, 0)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+  }
 }
+
